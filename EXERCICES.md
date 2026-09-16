@@ -71,7 +71,7 @@ Contexte : l'app affiche `donnees.json`. Les vraies données sensibles sont dans
 
 **5.1** Demande la documentation fonctionnelle de l'application.
 
-**5.2** Demande de générer des tests unitaires pour la fonction de filtrage par statut. Lance-les avec pytest, puis relis-les (ps : ajuter pytest au requirements).
+**5.2** Demande de générer des tests unitaires pour la fonction de filtrage par statut. Lance-les avec pytest, puis relis-les (ps : ajouter pytest au requirements).
 
 **5.3** Ajoute dans `GEMINI.md` une règle : « documenter et tester systématiquement toute nouvelle fonctionnalité ».
 
