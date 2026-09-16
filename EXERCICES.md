@@ -31,7 +31,7 @@ Observe : sans catégories imposées ni exemples, le résultat est vague / incoh
 résume les tickets
 ```
 
-**2.2** Objectif : obtenir un résumé pour remplir un tableau de suivi. Réécris un prompt structuré — rôle + objectif + le fichier `donnees.json` en contexte (`@donnees.json` ou glisse-le dans le chat) + format de sortie imposé — puis compare avec 2.1.
+**2.2** Objectif : obtenir un résumé pour remplir un tableau de suivi et montrer la valeur ajoutée de l'IA (en lui faisant générer une donnée qui n'existe pas explicitement). Réécris un prompt structuré — rôle + objectif + consigne d'analyse (ex: évaluer le niveau d'agacement du client) + le fichier donnees.json en contexte (@donnees.json ou glisse-le dans le chat) + format de sortie imposé
 
 Format attendu :
 
@@ -69,13 +69,13 @@ Contexte : l'app affiche `donnees.json`. Les vraies données sensibles sont dans
 
 ## Exercice 5 — Documenter, tester… puis automatiser  *(dans l'IDE)*
 
-**5.1** Demande la documentation de la fonction de filtrage — en incluant le nouveau filtre par statut ajouté à l'exo 4.
+**5.1** Demande la documentation fonctionnelle de l'application.
 
-**5.2** Demande de générer des tests unitaires pour cette fonction (priorité, recherche, statut). Lance-les avec pytest, puis relis-les.
+**5.2** Demande de générer des tests unitaires pour la fonction de filtrage par statut. Lance-les avec pytest, puis relis-les (ps : ajuter pytest au requirements).
 
 **5.3** Ajoute dans `GEMINI.md` une règle : « documenter et tester systématiquement toute nouvelle fonctionnalité ».
 
-**5.4** Demande une nouvelle feature (ex. un filtre par client) → observe qu'elle arrive déjà documentée et testée, sans avoir à le redemander.
+**5.4** Demande une nouvelle feature plus complexe (ex. un bandeau de 3 KPIs dynamiques en haut de page) → observe comment l'IA structure ce layout, ajoute la logique d'agrégation, et fournit la documentation et les tests sans avoir à les redemander.
 
 👉 `GEMINI.md` transforme une bonne pratique en réflexe automatique. Tu restes responsable : relis toujours les tests.
 
@@ -92,6 +92,8 @@ Contexte : l'app affiche `donnees.json`. Les vraies données sensibles sont dans
 **6.4** Demande-lui de faire des choses que lui seul peut faire : lancer les tests (`pytest`) pour vérifier que rien n'est cassé, et corriger si un test échoue.
 
 **6.5** Valide chaque action (Human in the loop), puis relance l'app toi-même pour voir le résultat.
+
+**6.6** Parcours l'application, refactorise le code dupliqué et réorganise proprement l'architecture du projet.
 
 👉 Bonne méthode agent : questions → plan → action → vérification. Un serveur comme Streamlit tourne en continu → c'est en général toi qui relances l'app.
 
