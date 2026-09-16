@@ -1,0 +1,22 @@
+# --- Corrections / docs animateur : NE PAS POUSSER ---
+CORRIGES.md
+corriges/
+*corrige*
+*correction*
+
+# --- Python ---
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+
+# --- Secrets Streamlit ---
+.streamlit/secrets.toml
+
+# --- OS / éditeurs ---
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
