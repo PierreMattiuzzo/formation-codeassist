@@ -10,8 +10,6 @@ def charger_tickets(chemin=CHEMIN_DONNEES):
     return pd.read_json(chemin)
 
 
-# Fonction volontairement peu documentee : sert de support a l'Exercice 5
-# (generer une documentation + des tests unitaires avec l'assistant, puis les relire).
 def filtrer_tickets(df, priorite=None, recherche=None):
     resultat = df
     if priorite and priorite != "Toutes":
